@@ -31,7 +31,7 @@ try:
     books = pd.DataFrame({'name': names_books, 'author': authors, 'format': formats, 'price': prices, "link": links})
 
     dotenv_path = find_dotenv()
-    load_dotenv(dotenv_path)
+    load_dotenv('.venv/.env')
 
     password = os.getenv("PASSWORD")
     encoded_password = quote_plus(str(password))
